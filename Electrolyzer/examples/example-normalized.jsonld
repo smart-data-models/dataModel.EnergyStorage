@@ -1,0 +1,37 @@
+{
+    "id": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001",
+    "type": "Electrolyzer",
+    "description": {
+        "type": "Property",
+        "value": "mixed generator model ~004 with maximum power 22w"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.184943709787973,
+                43.379971307869766
+            ]
+        }
+    },
+    "status": {
+        "type": "Property",
+        "value": "ON"
+    },
+    "name": {
+        "type": "Property",
+        "value": "Hydrogen generator #0001"
+    },
+    "maxPowerConsumed": {
+        "type": "Property",
+        "value": 3000
+    },
+    "maxHydrogenFlowGenerated": {
+        "type": "Property",
+        "value": 600
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld"
+    ]
+}
