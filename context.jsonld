@@ -1,6 +1,7 @@
 {
     "@context": {
         "Electrolyzer": "https://smartdatamodels.org/dataModel.EnergyStorage/Electrolyzer",
+        "ElectrolyzerMeasurement": "https://smartdatamodels.org/dataModel.EnergyStorage/ElectrolyzerMeasurement",
         "address": "https://smartdatamodels.org/address",
         "addressCountry": "https://smartdatamodels.org/addressCountry",
         "addressLocality": "https://smartdatamodels.org/addressLocality",
@@ -20,6 +21,7 @@
         "dateModified": "https://smartdatamodels.org/dateModified",
         "description": "http://purl.org/dc/terms/description",
         "district": "https://smartdatamodels.org/district",
+        "hydrogenFlowGenerated": "https://smartdatamodels.org/dataModel.EnergyStorage/hydrogenFlowGenerated",
         "id": "@id",
         "location": "https://uri.etsi.org/ngsi-ld/location",
         "maxHydrogenFlowGenerated": "https://smartdatamodels.org/dataModel.EnergyStorage/maxHydrogenFlowGenerated",
@@ -29,6 +31,8 @@
         "owner": "https://smartdatamodels.org/owner",
         "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
         "postalCode": "https://smartdatamodels.org/postalCode",
+        "powerConsumed": "https://smartdatamodels.org/dataModel.EnergyStorage/powerConsumed",
+        "refElectrolyzer": "https://smartdatamodels.org/dataModel.EnergyStorage/refElectrolyzer",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
         "status": "https://uri.etsi.org/ngsi-ld/status",

@@ -1,0 +1,57 @@
+ElectrolyzerMeasurement:
+  description: A instantaneous measure of hydrogen generation / power consumption by a electrolyzer
+  properties:
+    dataProvider:
+      description: A sequence of characters identifying the provider of the harmonised data entity
+      type: string
+      x-ngsi:
+        type: Property
+    dateCreated:
+      description: Entity creation timestamp.
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateModified:
+      description: Timestamp of the last modification of the entity
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    hydrogenFlowGenerated:
+      description: Hydrogen flow production (NL/h)
+      type: number
+      x-ngsi:
+        type: Property
+    id:
+      description: Unique ID of the object
+      format: uri
+      type: string
+      x-ngsi:
+        type: Property
+    powerConsumed:
+      description: power consumed (W)
+      type: number
+      x-ngsi:
+        type: Property
+    refElectrolyzer:
+      description: A reference to the entity Electrolyzer which it belongs the measurement
+      format: uri
+      type: string
+      x-ngsi:
+        type: Property
+    type:
+      description: Title of the form element
+      type: string
+      x-ngsi:
+        type: Property
+  required:
+    - id
+    - type
+  type: object
+  x-derived-from: ''
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
+  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/ElectrolyzerMeasurement/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/ElectrolyzerMeasurement/schema.json,
+  x-model-tags: ''
+  x-version: 0.0.1

@@ -5,6 +5,8 @@
 The following entity types are available:
 - [Electrolyzer](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/Electrolyzer/README.md). A generic electrolyzer which can generate hydrogen from energy
 
+- [ElectrolyzerMeasurement](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/ElectrolyzerMeasurement/README.md). A instantaneous measure of hydrogen generation / power consumption by a electrolyzer
+
 
 
 ### Contributors
