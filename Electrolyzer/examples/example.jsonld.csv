@@ -1,0 +1,2 @@
+"id", "type", "description", "location__coordinates__0", "location__coordinates__1", "status", "name", "maxPowerConsumed", "maxHydrogenFlowGenerated", "@context__0"
+"urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001", "Electrolyzer", "mixed generator model ~004 with maximum power 22w", "-4.184943709787973", "43.379971307869766", "ON", "Hydrogen generator #0001", "3000", "600", "https://smartdatamodels.org/context.jsonld"

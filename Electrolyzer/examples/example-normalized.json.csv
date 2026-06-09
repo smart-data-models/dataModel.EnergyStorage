@@ -1,0 +1,2 @@
+"id", "type", "description__value", "location__value__coordinates__0", "location__value__coordinates__1", "status__value", "name__value", "maxPowerConsumed__value", "maxHydrogenFlowGenerated__value"
+"urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001", "Electrolyzer", "mixed generator model ~004 with maximum power 22w", "-4.184943709787973", "43.379971307869766", "ON", "Hydrogen generator #0001", "3000", "600"

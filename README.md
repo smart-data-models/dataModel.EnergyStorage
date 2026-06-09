@@ -1,16 +1,15 @@
 # dataModel.EnergyStorage
 
-Smart Data Models subject for the SmartEnergy domain.
+### List of data models
 
-## Data Models
+The following entity types are available:
+- [Electrolyzer](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/Electrolyzer/README.md). A generic electrolyzer which can generate hydrogen from energy
 
-- [Electrolyzer](Electrolyzer/README.md)
 
-## License
 
-[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+### Contributors
+[Link](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/CONTRIBUTORS.yaml) to the 2 current contributors of the data models of this Subject.
 
-## Support
 
-- [Smart Data Models](https://smartdatamodels.org)
-- [GitHub Issues](https://github.com/smart-data-models/dataModel.EnergyStorage/issues)
+### Contribution
+You can raise an [issue](https://github.com/smart-data-models/dataModel.EnergyStorage/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.EnergyStorage/pulls) on existing data models
