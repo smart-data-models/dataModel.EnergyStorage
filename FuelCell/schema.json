@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.EnergyStorage/FuelCellMeasurement/schema.json,",
+  "title": "Fuel cell measuremet data model",
+  "description": "A instantaneous measure of hydrogen consumption / power generation by a fuel cell",
+  "modelTags": "",
+  "derivedFrom": "",
+  "license": "https://smart-data-models.github.io/dataModel.EnergyStorage/FuelCellMeasurement/LICENSE.md",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["FuelCell"],
+          "description": "Property. NGSI Entity type. It has to be FuelCell"
+        },
+        "powerGenerated": {
+          "type": "number",
+          "description": "Property. Power production (W). Units:'Watts'"
+        },
+        "hydrogenFlowConsumed": {
+          "type": "number",
+          "description": "Property. Hydrogen flow consumed (Nl/h)"
+        },
+        "refFuelCell": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. A reference to the entity FuelCell which it belongs the measurement"
+        },
+        "maxHydrogenFlowConsumed": {
+          "type": "number",
+          "description": "Property. Maximum amount of hydrogen consumed "
+        },
+        "maxPowerGenerated": {
+          "type": "number",
+          "description": "Property. Maximum power generated"
+        },
+        "status": {
+          "type": "string",
+          "description": "Property. Status: ON/OFF"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

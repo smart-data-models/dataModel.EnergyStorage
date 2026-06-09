@@ -1,0 +1,2 @@
+"id", "type", "powerGenerated__value", "hydrogenFlowConsumed__value", "dataProvider__value", "dateCreated__value", "dateModified__value", "refFuelCell__value"
+"urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b", "FuelCellMeasurement", "1847.3", "22.6", "tlmat-unican", "2019-01-01T12:00:00Z", "2025-03-01T12:00:00Z", "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001"

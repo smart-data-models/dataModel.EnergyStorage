@@ -7,6 +7,10 @@ The following entity types are available:
 
 - [ElectrolyzerMeasurement](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/ElectrolyzerMeasurement/README.md). A instantaneous measure of hydrogen generation / power consumption by a electrolyzer
 
+- [FuelCell](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/FuelCell/README.md). A instantaneous measure of hydrogen consumption / power generation by a fuel cell
+
+- [FuelCellMeasurement](https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/FuelCellMeasurement/README.md). A instantaneous measure of pressure and ambient temperature in a hydrogen storage tank
+
 
 
 ### Contributors

@@ -6,48 +6,40 @@
   "description": "A instantaneous measure of hydrogen generation / power consumption by a electrolyzer",
   "modelTags": "",
   "derivedFrom": "",
+  "license": "https://smart-data-models.github.io/dataModel.EnergyStorage/ElectrolyzerMeasurement/LICENSE.md",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ElectrolyzerMeasurement"],
+          "description": "Property. NGSI Entity type. It has to be ElectrolyzerMeasurement"
+        },
+        "hydrogenFlowGenerated": {
+          "type": "number",
+          "description": "Property. Hydrogen flow production (NL/h)"
+        },
+        "powerConsumed": {
+          "type": "number",
+          "description": "Property. Power consumed (W). Units:'watts'"
+        },
+        "refElectrolyzer": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. A reference to the entity Electrolyzer which it belongs the measurement"
+        }
+      }
+    }
+  ],
   "required": [
     "id",
     "type"
-  ],
-  "license": "https://smart-data-models.github.io/dataModel.EnergyStorage/ElectrolyzerMeasurement/LICENSE.md",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri",
-      "description": "Property. Unique ID of the object"
-    },
-    "type": {
-      "type": "string",
-      "description": "Property. Title of the form element"
-    },
-    "hydrogenFlowGenerated": {
-      "type": "number",
-      "description": "Property. Hydrogen flow production (NL/h)"
-    },
-    "powerConsumed": {
-      "type": "number",
-      "description": "Property. power consumed (W)"
-    },
-    "dataProvider": {
-      "type": "string",
-      "description": "Property. A sequence of characters identifying the provider of the harmonised data entity"
-    },
-    "dateCreated": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Property. Entity creation timestamp."
-    },
-    "dateModified": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Property. Timestamp of the last modification of the entity"
-    },
-    "refElectrolyzer": {
-      "type": "string",
-      "format": "uri",
-      "description": "Property. A reference to the entity Electrolyzer which it belongs the measurement"
-    }
-  }
+  ]
 }

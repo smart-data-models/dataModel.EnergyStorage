@@ -1,0 +1,2 @@
+"id", "type", "description", "location__coordinates__0", "location__coordinates__1", "status", "name", "maxPowerGenerated", "maxHydrogenFlowConsumed", "@context__0"
+"urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001", "FuelCell", "PEM fuel cell generator model FC-200 with maximum power 2 kW", "-4.184943709787973", "43.379971307869766", "ON", "Fuel Cell Generator #0001", "2000", "100", "https://smartdatamodels.org/context.jsonld"

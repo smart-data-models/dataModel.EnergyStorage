@@ -1,0 +1,34 @@
+{
+    "id": "urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b",
+    "type": "FuelCellMeasurement",
+    "powerGenerated": {
+        "type": "Number",
+        "value": 1847.3,
+        "metadata": {}
+    },
+    "hydrogenFlowConsumed": {
+        "type": "Number",
+        "value": 22.6,
+        "metadata": {}
+    },
+    "dataProvider": {
+        "type": "Text",
+        "value": "tlmat-unican",
+        "metadata": {}
+    },
+    "dateCreated": {
+        "type": "DateTime",
+        "value": "2019-01-01T12:00:00Z",
+        "metadata": {}
+    },
+    "dateModified": {
+        "type": "DateTime",
+        "value": "2025-03-01T12:00:00Z",
+        "metadata": {}
+    },
+    "refFuelCell": {
+        "type": "Text",
+        "value": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",
+        "metadata": {}
+    }
+}

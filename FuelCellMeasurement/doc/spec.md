@@ -1,13 +1,13 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entity: ElectrolyzerMeasurement  
-===============================<!-- /10-Header -->  
+Entity: FuelCellMeasurement  
+===========================<!-- /10-Header -->  
 <!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.EnergyStorage/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Global description: **A instantaneous measure of hydrogen generation / power consumption by a electrolyzer**  
+Global description: **A instantaneous measure of pressure and ambient temperature in a hydrogen storage tank**  
 version: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
@@ -23,7 +23,7 @@
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: Number identifying a specific property on a public street    
-- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `hydrogenFlowGenerated[number]`: Hydrogen flow production (NL/h)  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `powerConsumed[number]`: Power consumed (W)  - `refElectrolyzer[uri]`: A reference to the entity Electrolyzer which it belongs the measurement  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity type. It has to be ElectrolyzerMeasurement  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `hydrogenFlowConsumed[number]`: Flow of hydrogen consumed  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `powerGenerated[number]`: Power generated (W)  - `pressure[number]`: Pressure (bar)  - `refFuelCell[uri]`: Uri referencing the fuel cell  - `refHydrogenStorage[uri]`: A reference to the entity HydrogenStorage which it belongs the measurement  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `temperature[number]`: Ambient temperature (ºC)  - `type[string]`: NGSI Entity type. It has to be FuelCellMeasurement  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -37,8 +37,8 @@
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
-ElectrolyzerMeasurement:    
-  description: A instantaneous measure of hydrogen generation / power consumption by a electrolyzer    
+FuelCellMeasurement:    
+  description: A instantaneous measure of pressure and ambient temperature in a hydrogen storage tank    
   properties:    
     address:    
       description: The mailing address    
@@ -126,8 +126,8 @@ ElectrolyzerMeasurement:
       type: string    
       x-ngsi:    
         type: Property    
-    hydrogenFlowGenerated:    
-      description: Hydrogen flow production (NL/h)    
+    hydrogenFlowConsumed:    
+      description: Flow of hydrogen consumed    
       type: number    
       x-ngsi:    
         type: Property    
@@ -373,14 +373,26 @@ ElectrolyzerMeasurement:
       type: array    
       x-ngsi:    
         type: Property    
-    powerConsumed:    
-      description: Power consumed (W)    
+    powerGenerated:    
+      description: Power generated (W)    
       type: number    
       x-ngsi:    
         type: Property    
         units: watts    
-    refElectrolyzer:    
-      description: A reference to the entity Electrolyzer which it belongs the measurement    
+    pressure:    
+      description: Pressure (bar)    
+      type: number    
+      x-ngsi:    
+        type: Property    
+        units: bar    
+    refFuelCell:    
+      description: Uri referencing the fuel cell    
+      format: uri    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
+    refHydrogenStorage:    
+      description: A reference to the entity HydrogenStorage which it belongs the measurement    
       format: uri    
       type: string    
       x-ngsi:    
@@ -402,10 +414,16 @@ ElectrolyzerMeasurement:
       type: string    
       x-ngsi:    
         type: Property    
+    temperature:    
+      description: Ambient temperature (ºC)    
+      type: number    
+      x-ngsi:    
+        type: Property    
+        units: degrees celsius    
     type:    
-      description: NGSI Entity type. It has to be ElectrolyzerMeasurement    
+      description: NGSI Entity type. It has to be FuelCellMeasurement    
       enum:    
-        - ElectrolyzerMeasurement    
+        - FuelCellMeasurement    
       type: string    
       x-ngsi:    
         type: Property    
@@ -415,8 +433,8 @@ ElectrolyzerMeasurement:
   type: object    
   x-derived-from: ''    
   x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
-  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/ElectrolyzerMeasurement/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/ElectrolyzerMeasurement/schema.json,    
+  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/FuelCellMeasurement/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/HydrogenStorageMeasurement/schema.json,    
   x-model-tags: ''    
   x-version: 0.0.1    
 ```  
@@ -427,37 +445,37 @@ ElectrolyzerMeasurement:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Example payloads    
-#### ElectrolyzerMeasurement NGSI-v2 key-values Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### FuelCellMeasurement NGSI-v2 key-values Example    
+Here is an example of a FuelCellMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-  "type": "ElectrolyzerMeasurement",  
-  "hydrogenFlowGenerated":509.87 ,  
-  "powerConsumed": 2387.5,  
-  "dataProvider": "tlmat-unican",  
-  "dateCreated": "2019-01-01T12:00:00Z",  
-  "dateModified": "2025-03-01T12:00:00Z",  
-  "refElectrolyzer":"urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001"  
+    "id": "urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b",  
+    "type": "FuelCellMeasurement",  
+    "powerGenerated": 1847.3,  
+    "hydrogenFlowConsumed": 22.6,  
+    "dataProvider": "tlmat-unican",  
+    "dateCreated": "2019-01-01T12:00:00Z",  
+    "dateModified": "2025-03-01T12:00:00Z",  
+    "refFuelCell": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001"  
 }  
 ```  
 </details>  
-#### ElectrolyzerMeasurement NGSI-v2 normalized Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### FuelCellMeasurement NGSI-v2 normalized Example    
+Here is an example of a FuelCellMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-    "type": "ElectrolyzerMeasurement",  
-    "hydrogenFlowGenerated": {  
+    "id": "urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b",  
+    "type": "FuelCellMeasurement",  
+    "powerGenerated": {  
         "type": "Number",  
-        "value": 509.87,  
+        "value": 1847.3,  
         "metadata": {}  
     },  
-    "powerConsumed": {  
+    "hydrogenFlowConsumed": {  
         "type": "Number",  
-        "value": 2387.5,  
+        "value": 22.6,  
         "metadata": {}  
     },  
     "dataProvider": {  
@@ -475,47 +493,47 @@ ElectrolyzerMeasurement:
         "value": "2025-03-01T12:00:00Z",  
         "metadata": {}  
     },  
-    "refElectrolyzer": {  
+    "refFuelCell": {  
         "type": "Text",  
-        "value": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001",  
+        "value": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",  
         "metadata": {}  
     }  
 }  
 ```  
 </details>  
-#### ElectrolyzerMeasurement NGSI-LD key-values Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### FuelCellMeasurement NGSI-LD key-values Example    
+Here is an example of a FuelCellMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-    "type": "ElectrolyzerMeasurement",  
-    "hydrogenFlowGenerated": 509.87,  
-    "powerConsumed": 2387.5,  
+    "id": "urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b",  
+    "type": "FuelCellMeasurement",  
+    "powerGenerated": 1847.3,  
+    "hydrogenFlowConsumed": 22.6,  
     "dataProvider": "tlmat-unican",  
     "dateCreated": "2019-01-01T12:00:00Z",  
     "dateModified": "2025-03-01T12:00:00Z",  
-    "refElectrolyzer": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001",  
+    "refFuelCell": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",  
     "@context": [  
         "https://smartdatamodels.org/context.jsonld"  
     ]  
 }  
 ```  
 </details>  
-#### ElectrolyzerMeasurement NGSI-LD normalized Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### FuelCellMeasurement NGSI-LD normalized Example    
+Here is an example of a FuelCellMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-    "type": "ElectrolyzerMeasurement",  
-    "hydrogenFlowGenerated": {  
+    "id": "urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b",  
+    "type": "FuelCellMeasurement",  
+    "powerGenerated": {  
         "type": "Property",  
-        "value": 509.87  
+        "value": 1847.3  
     },  
-    "powerConsumed": {  
+    "hydrogenFlowConsumed": {  
         "type": "Property",  
-        "value": 2387.5  
+        "value": 22.6  
     },  
     "dataProvider": {  
         "type": "Property",  
@@ -529,9 +547,9 @@ ElectrolyzerMeasurement:
         "type": "Property",  
         "value": "2025-03-01T12:00:00Z"  
     },  
-    "refElectrolyzer": {  
+    "refFuelCell": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001"  
+        "object": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001"  
     },  
     "@context": [  
         "https://smartdatamodels.org/context.jsonld"  

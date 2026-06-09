@@ -1,5 +1,5 @@
-ElectrolyzerMeasurement:
-  description: A instantaneous measure of hydrogen generation / power consumption by a electrolyzer
+FuelCellMeasurement:
+  description: A instantaneous measure of pressure and ambient temperature in a hydrogen storage tank
   properties:
     address:
       description: The mailing address
@@ -87,8 +87,8 @@ ElectrolyzerMeasurement:
       type: string
       x-ngsi:
         type: Property
-    hydrogenFlowGenerated:
-      description: Hydrogen flow production (NL/h)
+    hydrogenFlowConsumed:
+      description: Flow of hydrogen consumed
       type: number
       x-ngsi:
         type: Property
@@ -334,14 +334,26 @@ ElectrolyzerMeasurement:
       type: array
       x-ngsi:
         type: Property
-    powerConsumed:
-      description: Power consumed (W)
+    powerGenerated:
+      description: Power generated (W)
       type: number
       x-ngsi:
         type: Property
         units: watts
-    refElectrolyzer:
-      description: A reference to the entity Electrolyzer which it belongs the measurement
+    pressure:
+      description: Pressure (bar)
+      type: number
+      x-ngsi:
+        type: Property
+        units: bar
+    refFuelCell:
+      description: Uri referencing the fuel cell
+      format: uri
+      type: string
+      x-ngsi:
+        type: Relationship
+    refHydrogenStorage:
+      description: A reference to the entity HydrogenStorage which it belongs the measurement
       format: uri
       type: string
       x-ngsi:
@@ -363,10 +375,16 @@ ElectrolyzerMeasurement:
       type: string
       x-ngsi:
         type: Property
+    temperature:
+      description: Ambient temperature (ºC)
+      type: number
+      x-ngsi:
+        type: Property
+        units: degrees celsius
     type:
-      description: NGSI Entity type. It has to be ElectrolyzerMeasurement
+      description: NGSI Entity type. It has to be FuelCellMeasurement
       enum:
-        - ElectrolyzerMeasurement
+        - FuelCellMeasurement
       type: string
       x-ngsi:
         type: Property
@@ -376,7 +394,7 @@ ElectrolyzerMeasurement:
   type: object
   x-derived-from: ''
   x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
-  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/ElectrolyzerMeasurement/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/ElectrolyzerMeasurement/schema.json,
+  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/FuelCellMeasurement/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/HydrogenStorageMeasurement/schema.json,
   x-model-tags: ''
   x-version: 0.0.1

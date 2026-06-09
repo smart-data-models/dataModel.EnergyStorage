@@ -1,0 +1,37 @@
+{
+    "id": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",
+    "type": "FuelCell",
+    "description": {
+        "type": "Property",
+        "value": "PEM fuel cell generator model FC-200 with maximum power 2 kW"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.184943709787973,
+                43.379971307869766
+            ]
+        }
+    },
+    "status": {
+        "type": "Property",
+        "value": "ON"
+    },
+    "name": {
+        "type": "Property",
+        "value": "Fuel Cell Generator #0001"
+    },
+    "maxPowerGenerated": {
+        "type": "Property",
+        "value": 2000
+    },
+    "maxHydrogenFlowConsumed": {
+        "type": "Property",
+        "value": 100
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld"
+    ]
+}

@@ -1,44 +1,44 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entity: ElectrolyzerMeasurement  
-===============================<!-- /10-Header -->  
+Entità: FuelCell  
+================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Open License](https://github.com/smart-data-models//dataModel.EnergyStorage/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[Licenza Aperta](https://github.com/smart-data-models//dataModel.EnergyStorage/LICENSE.md)  
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Global description: **A instantaneous measure of hydrogen generation / power consumption by a electrolyzer**  
+Descrizione globale: **Una misura istantanea del consumo di idrogeno / della generazione di potenza da parte di una cella a combustibile**  
 version: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## List of properties  
+## Elenco delle proprietà  
 
-<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
-	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Number identifying a specific property on a public street    
-- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `hydrogenFlowGenerated[number]`: Hydrogen flow production (NL/h)  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `powerConsumed[number]`: Power consumed (W)  - `refElectrolyzer[uri]`: A reference to the entity Electrolyzer which it belongs the measurement  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity type. It has to be ElectrolyzerMeasurement  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/pattern</sub></sup>  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale    
+	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'indirizzo civico  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
+- `alternateName[string]`: Un nome alternativo per questo elemento  - `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un articolo offerto  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Questo sarà solitamente assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Questo sarà solitamente allocato dalla piattaforma di archiviazione  - `description[string]`: Una descrizione di questo elemento  - `hydrogenFlowConsumed[number]`: Flusso di idrogeno consumato (Nl/h)  - `id[*]`: Identificatore unico dell'entità  - `location[*]`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maxHydrogenFlowConsumed[number]`: Quantità massima di idrogeno consumata   - `maxPowerGenerated[number]`: Potenza massima generata  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata in JSON che fa riferimento agli ID unici del/i proprietario/i  - `powerGenerated[number]`: Produzione di potenza (W)  - `refFuelCell[uri]`: Un riferimento all'entità FuelCell a cui appartiene la misurazione  - `seeAlso[*]`: elenco di URI che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si raccomanda che sia il nome di dominio completo del fornitore della fonte, o l'URL dell'oggetto fonte  - `status[string]`: Stato: ON/OFF  - `type[string]`: Tipo di entità NGSI. Deve essere FuelCell  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Required properties  
+Proprietà richieste  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
-notes appearing at the beginning of the spec  
+note che appaiono all'inizio della specifica  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+## Descrizione delle proprietà del modello di dati  
+Ordinato alfabeticamente (clicca per dettagli)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
-ElectrolyzerMeasurement:    
-  description: A instantaneous measure of hydrogen generation / power consumption by a electrolyzer    
+FuelCell:    
+  description: A instantaneous measure of hydrogen consumption / power generation by a fuel cell    
   properties:    
     address:    
       description: The mailing address    
@@ -126,8 +126,8 @@ ElectrolyzerMeasurement:
       type: string    
       x-ngsi:    
         type: Property    
-    hydrogenFlowGenerated:    
-      description: Hydrogen flow production (NL/h)    
+    hydrogenFlowConsumed:    
+      description: Hydrogen flow consumed (Nl/h)    
       type: number    
       x-ngsi:    
         type: Property    
@@ -346,6 +346,16 @@ ElectrolyzerMeasurement:
             type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
+    maxHydrogenFlowConsumed:    
+      description: 'Maximum amount of hydrogen consumed '    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    maxPowerGenerated:    
+      description: Maximum power generated    
+      type: number    
+      x-ngsi:    
+        type: Property    
     name:    
       description: The name of this item    
       type: string    
@@ -373,14 +383,14 @@ ElectrolyzerMeasurement:
       type: array    
       x-ngsi:    
         type: Property    
-    powerConsumed:    
-      description: Power consumed (W)    
+    powerGenerated:    
+      description: Power production (W)    
       type: number    
       x-ngsi:    
         type: Property    
-        units: watts    
-    refElectrolyzer:    
-      description: A reference to the entity Electrolyzer which it belongs the measurement    
+        units: Watts    
+    refFuelCell:    
+      description: A reference to the entity FuelCell which it belongs the measurement    
       format: uri    
       type: string    
       x-ngsi:    
@@ -402,10 +412,15 @@ ElectrolyzerMeasurement:
       type: string    
       x-ngsi:    
         type: Property    
+    status:    
+      description: 'Status: ON/OFF'    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
-      description: NGSI Entity type. It has to be ElectrolyzerMeasurement    
+      description: NGSI Entity type. It has to be FuelCell    
       enum:    
-        - ElectrolyzerMeasurement    
+        - FuelCell    
       type: string    
       x-ngsi:    
         type: Property    
@@ -415,123 +430,147 @@ ElectrolyzerMeasurement:
   type: object    
   x-derived-from: ''    
   x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
-  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/ElectrolyzerMeasurement/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/ElectrolyzerMeasurement/schema.json,    
+  x-license-url: https://github.com/smart-data-models/dataModel.EnergyStorage/blob/master/FuelCell/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.EnergyStorage/FuelCellMeasurement/schema.json,    
   x-model-tags: ''    
   x-version: 0.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
-notes appearing in the middle of the spec  
+note che appaiono al centro della specifica  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Example payloads    
-#### ElectrolyzerMeasurement NGSI-v2 key-values Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## Esempi di payload    
+#### Esempio FuelCell NGSI-v2 coppie chiave-valore    
+Ecco un esempio di FuelCell in formato JSON-LD come coppie chiave-valore. Questo è compatibile con NGSI-v2 quando si utilizza `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-  "type": "ElectrolyzerMeasurement",  
-  "hydrogenFlowGenerated":509.87 ,  
-  "powerConsumed": 2387.5,  
-  "dataProvider": "tlmat-unican",  
-  "dateCreated": "2019-01-01T12:00:00Z",  
-  "dateModified": "2025-03-01T12:00:00Z",  
-  "refElectrolyzer":"urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001"  
+    "id": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",  
+    "type": "FuelCell",  
+    "description": "PEM fuel cell generator model FC-200 with maximum power 2 kW",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -4.184943709787973,  
+            43.379971307869766  
+        ]  
+    },  
+    "status": "ON",  
+    "name": "Fuel Cell Generator #0001",  
+    "maxPowerGenerated": 2000,  
+    "maxHydrogenFlowConsumed": 100  
 }  
 ```  
 </details>  
-#### ElectrolyzerMeasurement NGSI-v2 normalized Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### Esempio normalizzato FuelCell NGSI-v2    
+Ecco un esempio di FuelCell in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-    "type": "ElectrolyzerMeasurement",  
-    "hydrogenFlowGenerated": {  
-        "type": "Number",  
-        "value": 509.87,  
-        "metadata": {}  
-    },  
-    "powerConsumed": {  
-        "type": "Number",  
-        "value": 2387.5,  
-        "metadata": {}  
-    },  
-    "dataProvider": {  
+    "id": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",  
+    "type": "FuelCell",  
+    "description": {  
         "type": "Text",  
-        "value": "tlmat-unican",  
+        "value": "PEM fuel cell generator model FC-200 with maximum power 2 kW",  
         "metadata": {}  
     },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2019-01-01T12:00:00Z",  
+    "location": {  
+        "type": "geo:json",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.184943709787973,  
+                43.379971307869766  
+            ]  
+        },  
         "metadata": {}  
     },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2025-03-01T12:00:00Z",  
-        "metadata": {}  
-    },  
-    "refElectrolyzer": {  
+    "status": {  
         "type": "Text",  
-        "value": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001",  
+        "value": "ON",  
+        "metadata": {}  
+    },  
+    "name": {  
+        "type": "Text",  
+        "value": "Fuel Cell Generator #0001",  
+        "metadata": {}  
+    },  
+    "maxPowerGenerated": {  
+        "type": "Number",  
+        "value": 2000,  
+        "metadata": {}  
+    },  
+    "maxHydrogenFlowConsumed": {  
+        "type": "Number",  
+        "value": 100,  
         "metadata": {}  
     }  
 }  
 ```  
 </details>  
-#### ElectrolyzerMeasurement NGSI-LD key-values Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### Esempio FuelCell NGSI-LD coppie chiave-valore    
+Ecco un esempio di FuelCell in formato JSON-LD come coppie chiave-valore. Questo è compatibile con NGSI-LD quando si utilizza `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-    "type": "ElectrolyzerMeasurement",  
-    "hydrogenFlowGenerated": 509.87,  
-    "powerConsumed": 2387.5,  
-    "dataProvider": "tlmat-unican",  
-    "dateCreated": "2019-01-01T12:00:00Z",  
-    "dateModified": "2025-03-01T12:00:00Z",  
-    "refElectrolyzer": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001",  
+    "id": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",  
+    "type": "FuelCell",  
+    "description": "PEM fuel cell generator model FC-200 with maximum power 2 kW",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -4.184943709787973,  
+            43.379971307869766  
+        ]  
+    },  
+    "status": "ON",  
+    "name": "Fuel Cell Generator #0001",  
+    "maxPowerGenerated": 2000,  
+    "maxHydrogenFlowConsumed": 100,  
     "@context": [  
         "https://smartdatamodels.org/context.jsonld"  
     ]  
 }  
 ```  
 </details>  
-#### ElectrolyzerMeasurement NGSI-LD normalized Example    
-Here is an example of a ElectrolyzerMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### Esempio normalizzato FuelCell NGSI-LD    
+Ecco un esempio di FuelCell in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ElectrolyzerMeasurement:santander:ElectrolyzerMeasurement:Generator:a34f24b",  
-    "type": "ElectrolyzerMeasurement",  
-    "hydrogenFlowGenerated": {  
+    "id": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001",  
+    "type": "FuelCell",  
+    "description": {  
         "type": "Property",  
-        "value": 509.87  
+        "value": "PEM fuel cell generator model FC-200 with maximum power 2 kW"  
     },  
-    "powerConsumed": {  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.184943709787973,  
+                43.379971307869766  
+            ]  
+        }  
+    },  
+    "status": {  
         "type": "Property",  
-        "value": 2387.5  
+        "value": "ON"  
     },  
-    "dataProvider": {  
+    "name": {  
         "type": "Property",  
-        "value": "tlmat-unican"  
+        "value": "Fuel Cell Generator #0001"  
     },  
-    "dateCreated": {  
+    "maxPowerGenerated": {  
         "type": "Property",  
-        "value": "2019-01-01T12:00:00Z"  
+        "value": 2000  
     },  
-    "dateModified": {  
+    "maxHydrogenFlowConsumed": {  
         "type": "Property",  
-        "value": "2025-03-01T12:00:00Z"  
-    },  
-    "refElectrolyzer": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Electrolyzer:santander:EnergyStorage:electrolyzer:0001"  
+        "value": 100  
     },  
     "@context": [  
         "https://smartdatamodels.org/context.jsonld"  
@@ -540,10 +579,10 @@ ElectrolyzerMeasurement:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
-notes appearing in the footer of the spec  
+note che appaiono nel piè di pagina della specifica  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+Vedi [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di misura  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

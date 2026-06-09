@@ -1,0 +1,31 @@
+{
+    "id": "urn:ngsi-ld:FuelCellMeasurement:santander:FuelCellMeasurement:Generator:a34f24b",
+    "type": "FuelCellMeasurement",
+    "powerGenerated": {
+        "type": "Property",
+        "value": 1847.3
+    },
+    "hydrogenFlowConsumed": {
+        "type": "Property",
+        "value": 22.6
+    },
+    "dataProvider": {
+        "type": "Property",
+        "value": "tlmat-unican"
+    },
+    "dateCreated": {
+        "type": "Property",
+        "value": "2019-01-01T12:00:00Z"
+    },
+    "dateModified": {
+        "type": "Property",
+        "value": "2025-03-01T12:00:00Z"
+    },
+    "refFuelCell": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:FuelCell:santander:EnergyStorage:fuelCell:0001"
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld"
+    ]
+}
